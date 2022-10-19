@@ -360,7 +360,7 @@ local function init()
             path       = var.session_cookie_path                   or "/",
             domain     = var.session_cookie_domain,
             samesite   = var.session_cookie_samesite               or "Lax",
-            secure     = enabled(var.session_cookie_secure),
+            secure     = enabled(var.session_cookie_secure         or true),
             httponly   = enabled(var.session_cookie_httponly       or true),
             persistent = enabled(var.session_cookie_persistent     or false),
             discard    = tonumber(var.session_cookie_discard,  10) or 10,
